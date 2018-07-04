@@ -10,9 +10,8 @@ def response(_packet):
 
 jpg_gadget = ""
 packets = rdpcap('./sslpacket.pcap') 
-f = open("flag_16.jpg", "wb")
+
 log.info("Start")
-#log.info("packets size : %d" % len(packets))
 for i, packet in enumerate(packets):
     packet_len = len(packet)
 
@@ -27,7 +26,6 @@ for i, packet in enumerate(packets):
         log.info("Wrote it in file.")
         EOF = True
         f.close()
-
 log.info("Done !")
 f.close()
 
